@@ -10,17 +10,22 @@ public class PlayerController : MonoBehaviour
     public Transform verificadorChao;
     public float raioVerificacao = 0.2f;
     public LayerMask camadaChao;
+    public bool walking;
+    private Animator animator;
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 3;
+        animator = GetComponent<Animator>();
     }
 
     void Update()
     {
+        animator.SetBool("walking", Input.GetButton("Horizontal"));
+
         float movimentoX = Input.GetAxisRaw("Horizontal");
         rb.linearVelocity = new Vector2(movimentoX * velocidadeMovimento, rb.linearVelocity.y);
-
+    
         estaNoChao = Physics2D.OverlapCircle(verificadorChao.position, raioVerificacao, camadaChao);
 
         if (Input.GetKeyDown(KeyCode.Space))
