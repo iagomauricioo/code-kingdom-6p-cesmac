@@ -201,7 +201,7 @@ Transform:
   m_GameObject: {fileID: 70637895}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0226, y: -0.47, z: 0}
+  m_LocalPosition: {x: 0.0226, y: 1.68, z: 0}
   m_LocalScale: {x: 10.830836, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -241,7 +241,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.022395372}
+  m_Offset: {x: 0, y: 0.0226385}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -251,7 +251,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 0.95520926}
+  m_Size: {x: 1, y: 1.045277}
   m_EdgeRadius: 0
 --- !u!1 &809488282
 GameObject:
@@ -415,7 +415,7 @@ Transform:
   m_GameObject: {fileID: 1107831558}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalPosition: {x: 0, y: -0.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -451,7 +451,7 @@ Transform:
   m_GameObject: {fileID: 1111995989}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.71, y: 1.53, z: 0}
+  m_LocalPosition: {x: -4.71, y: 4.12, z: 0}
   m_LocalScale: {x: 1.2491707, y: 1.393685, z: 1.7929821}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -477,6 +477,7 @@ MonoBehaviour:
   camadaChao:
     serializedVersion: 2
     m_Bits: 8
+  walking: 0
 --- !u!50 &1111995995
 Rigidbody2D:
   serializedVersion: 5
@@ -538,7 +539,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.018614978, y: -0.2998078}
+  m_Offset: {x: 0.018614978, y: -0.24597621}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -548,7 +549,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.89847165, y: 1.5064797}
+  m_Size: {x: 0.89847165, y: 1.3988163}
   m_EdgeRadius: 0
 --- !u!212 &1111995997
 SpriteRenderer:

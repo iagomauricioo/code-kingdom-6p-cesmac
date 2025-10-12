@@ -25,7 +25,15 @@ public class PlayerController : MonoBehaviour
 
         float movimentoX = Input.GetAxisRaw("Horizontal");
         rb.linearVelocity = new Vector2(movimentoX * velocidadeMovimento, rb.linearVelocity.y);
-    
+
+        if (movimentoX > 0) {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
+        if (movimentoX < 0) {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
+        
+
         estaNoChao = Physics2D.OverlapCircle(verificadorChao.position, raioVerificacao, camadaChao);
 
         if (Input.GetKeyDown(KeyCode.Space))
