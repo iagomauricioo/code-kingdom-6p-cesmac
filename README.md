@@ -1,6 +1,6 @@
-# Projeto de Movimentação Unity 2D
+# Projeto Code Kingdom Unity 2D
 
-Este é um projeto Unity 2D focado na implementação de sistema de movimentação de personagem com animações.
+Este é um projeto Unity 2D focado em ensinar programação.
 
 ## 📋 Funcionalidades Implementadas
 
