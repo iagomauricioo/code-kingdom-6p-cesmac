@@ -184,15 +184,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Tileset Wall_2
+      name: wall_esquerda
       rect:
         serializedVersion: 2
         x: 287
         y: 383
         width: 12
-        height: 98
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 48
+      alignment: 9
+      pivot: {x: 2.6666667, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -206,15 +206,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Tileset Wall_3
+      name: wall_direita
       rect:
         serializedVersion: 2
         x: 343
         y: 383
-        width: 10
-        height: 98
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 12
+        height: 48
+      alignment: 9
+      pivot: {x: -2, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -233,8 +233,8 @@ TextureImporter:
         serializedVersion: 2
         x: 384
         y: 471
-        width: 98
-        height: 10
+        width: 48
+        height: 41
       alignment: 2
       pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -343,8 +343,8 @@ TextureImporter:
         serializedVersion: 2
         x: 127
         y: 159
-        width: 66
-        height: 66
+        width: 48
+        height: 65
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -375,14 +375,14 @@ TextureImporter:
     nameFileIdTable:
       TX Tileset Wall_0: -1733087341866461178
       TX Tileset Wall_1: 6957734447361721616
-      TX Tileset Wall_2: 6591716156378716260
-      TX Tileset Wall_3: 2165944517536112100
       TX Tileset Wall_4: 6429608448122266744
       TX Tileset Wall_5: -8038740358467470550
       TX Tileset Wall_6: -5334644376926737371
       TX Tileset Wall_7: -5954229690154693420
       TX Tileset Wall_8: -522149132528552129
       TX Tileset Wall_9: 6981085378657702106
+      wall_direita: 2165944517536112100
+      wall_esquerda: 6591716156378716260
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
