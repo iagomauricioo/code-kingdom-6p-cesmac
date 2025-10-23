@@ -4,50 +4,30 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rb;
     public float velocidadeMovimento = 5f;
-    public float forcaPulo = 10f;
-
-    private bool estaNoChao;
-    public Transform verificadorChao;
-    public float raioVerificacao = 0.2f;
-    public LayerMask camadaChao;
-    public bool walking;
     private Animator animator;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.gravityScale = 3;
+        rb.gravityScale = 0; // sem gravidade no top-down
+        rb.freezeRotation = true;
         animator = GetComponent<Animator>();
     }
 
     void Update()
     {
-        animator.SetBool("walking", Input.GetButton("Horizontal"));
-
         float movimentoX = Input.GetAxisRaw("Horizontal");
-        rb.linearVelocity = new Vector2(movimentoX * velocidadeMovimento, rb.linearVelocity.y);
+        float movimentoY = Input.GetAxisRaw("Vertical");
 
-        if (movimentoX > 0) {
-            transform.localScale = new Vector3(1, 1, 1);
-        }
-        if (movimentoX < 0) {
-            transform.localScale = new Vector3(-1, 1, 1);
-        }
-        
+        Vector2 movimento = new Vector2(movimentoX, movimentoY).normalized;
+        rb.linearVelocity = movimento * velocidadeMovimento;
 
-        estaNoChao = Physics2D.OverlapCircle(verificadorChao.position, raioVerificacao, camadaChao);
+        // Atualiza a animação (se tiver)
+        bool estaAndando = movimento.magnitude > 0;
+        animator.SetBool("walking", estaAndando);
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (estaNoChao)
-            {
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, forcaPulo);
-            }
-        }
-    }
-
-    void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(verificadorChao.position, raioVerificacao);
+        // Flip horizontal opcional
+        if (movimentoX > 0) transform.localScale = new Vector3(1, 1, 1);
+        else if (movimentoX < 0) transform.localScale = new Vector3(-1, 1, 1);
     }
 }
